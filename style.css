@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  margin: 0;
+}
+
+#main {
+  grid-area: main;
+}
+nav {
+  grid-area: nav;
+}
+
+footer {
+  grid-area: footer;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 50px 50px 1fr 50px 50px 50px 50px;
+  grid-template-areas: "about store . gmail images apps signin";
+  list-style-type: none;
+  padding: 0;
+}
+
+
+.about {
+  grid-area: about;
+  align-self: center;
+  justify-self: center;
+}
+
+.store {
+  grid-area: store;
+  align-self: center;
+  justify-self: center;
+}
+
+.gmail {
+  grid-area: gmail;
+  align-self: center;
+  justify-self: center;
+}
+
+.images {
+  grid-area: images;
+  align-self: center;
+  justify-self: center;
+}
+
+.apps {
+  grid-area: apps;
+  align-self: center;
+  justify-self: center;
+}
+
+.signin {
+  grid-area: signin;
+  align-self: center;
+  justify-self: center;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 120px 130px 105px;
+  grid-template-areas:
+  ". logo ."
+  ". input ."
+  ". btns ."
+  ". . .";
+}
+
+#logo {
+  grid-area: logo;
+  align-self: end;
+  justify-self: center;
+}
+
+#input {
+  grid-area: input;
+  align-self: center;
+  position: relative;
+}
+
+
+
+#btns {
+  grid-area: btns;
+  display: flex;
+  align-self: start;
+  justify-self: center;
+}
+
+ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-areas: "left-footer middle-footer right-footer";
+  text-decoration: none;
+  list-style-type: none;
+  padding-top: 10px;
+  background-color: #f2f2f2;
+}
+
+
+#left-footer {
+  grid-area: left-footer;
+  display: flex;
+  align-items: start;
+}
+
+#middle-footer {
+  grid-area: middle-footer;
+  padding-left: 85px;
+}
+
+#right-footer {
+  grid-area: right-footer;
+  display: flex;
+  align-items: end;
+}
+
+.advertising {
+  grid-area: advertising;
+  margin-right: 25px;
+}
+
+.business {
+  grid-area: business;
+  margin-right: 25px;
+}
+
+.how-search-works {
+  grid-area: hsw;
+}
+
+.carbon {
+  grid-area: carbon;
+}
+
+.privacy {
+  grid-area: privacy;
+  padding-left: 200px;
+}
+
+.terms {
+  grid-area: terms;
+  margin-left: 25px;
+}
+
+.settings {
+  grid-area: settings;
+  margin-left: 25px;
+}
+
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.signin > a {
+color: white;
+font-weight: bolder;
+background-color: blue;
+text-decoration: none;
+height: 34px;
+width: 16px;
+padding: 2px;
+text-align: center;
+}
+
+.search {
+  position: absolute;
+  color: gray;
+  top: 20px;
+  left: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.microphone {
+  color: blue;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-search {
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 10px;
+  /*margin-top: -15px*/
+  cursor: pointer;
+}
+
+#lucky-btn {
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.google-search:hover {
+  border: 1px solid lightgrey;
+}
+
+#lucky-btn:hover {
+  border: 1px solid lightgrey;
+}
+
+input {
+width: 85vh;
+height: 7vh;
+border-style: solid;
+border-color: rgba(201, 202, 201, 0.973);
+border-radius: 25px;
+outline: 0;
+}
+input:hover {
+  box-shadow: 1px 1px 5px grey;
+}
+
+input:touched {
+  border: none;
+}
+
+.fa-envira {
+  color: green;
+}
+
+@media (max-width: 600px ){
+  ol {
+    display: grid;
+    grid-template-columns: 3fr;
+    row-gap: 20px;
+    grid-template-areas: "middle-footer middle-footer middle-footer"
+                        "right-footer right-footer right-footer"
+                        "left-footer left-footer left-footer";
+  }
+
+  #middle-footer {
+    margin-left: 40px;
+  }
+
+  #left-footer {
+    margin-left: 80px;
+  }
+
+  #right-footer {
+    margin-left: -80px;
+  }
+
+  #main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 180px 100px 120px 85px;
+    grid-template-areas:
+    ". logo ."
+    ". input ."
+    ". btns ."
+    ". . .";
+  }
+
+  input {
+  width: 75vh;
+  height: 7vh;
+  border-style: solid;
+  border-color: rgba(201, 202, 201, 0.973);
+  border-radius: 25px;
+  outline: 0;
+  }
+}
